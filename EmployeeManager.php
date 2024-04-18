@@ -14,6 +14,24 @@ class EmployeeManager
         }
         return $employees;
     }
+    public function addEmployee(Employee $employee)
+    {
+        $db = Database::getInstance()->getConnection();
+        $stmt = $db->prepare("INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)");
+
+        // Get values from the employee object
+        $name = $employee->getName();
+        $address = $employee->getAddress();
+        $salary = $employee->getSalary();
+
+        // Bind parameters
+        $stmt->bind_param("ssd", $name, $address, $salary);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Close the statement
+        $stmt->close();
+    }
 
 }
-?>
