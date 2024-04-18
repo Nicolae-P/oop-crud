@@ -1,0 +1,43 @@
+/* Base styles */
+.wrapper {
+    max-width: 96%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td:last-child {
+    min-width: 100px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        width: 75%;
+    }
+    table tr td:last-child {
+        width: 120px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .wrapper {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 50%;
+    }
+}
