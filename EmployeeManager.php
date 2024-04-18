@@ -66,5 +66,13 @@ class EmployeeManager
         // Close the statement
         $stmt->close();
     }
+    public function deleteEmployee($id)
+    {
+        $db = Database::getInstance()->getConnection();
+        $stmt = $db->prepare("DELETE FROM employees WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+    }
 
 }

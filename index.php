@@ -54,7 +54,7 @@ $employees = $manager->getAllEmployees();
                             echo "<td>" . htmlspecialchars($employee->getAddress()) . "</td>";
                             echo "<td>" . htmlspecialchars($employee->getSalary()) . "</td>";
                             echo "<td>";
-                            echo '<a href="update.php?id=' . $employee->getId() . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                            echo '<a href="update.php?id=' . $employee->getId() . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="px-3 fa fa-pencil"></span></a>';
                             echo '<a href="delete.php?id=' . $employee->getId() . '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                             echo "</td>";
                             echo "</tr>";

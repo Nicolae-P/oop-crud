@@ -2,7 +2,7 @@
 require_once 'EmployeeManager.php';
 require_once 'Employee.php';
 
-$id = $name = $address = $salary = ""; // Initialize all variables at the top
+$id = $name = $address = $salary = "";
 $name_err = $address_err = $salary_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
@@ -41,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
         exit();
     }
 } else {
-    // This section is new; it handles fetching current employee details for updating
     if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
         $id = trim($_GET["id"]);
         $manager = new EmployeeManager();
